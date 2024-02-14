@@ -20,16 +20,18 @@
     <h2 class="section-heading">Seguridad</h2>
     <form @submit.prevent="actualizarPassword" class="form">
       <label for="rol">Rol:</label>
+      <br>
       <span id="rol">{{ usuario.rol }}</span>
+      <br>
       <label for="password">Contraseña:</label>
       <input v-model="password" type="password" id="password" class="input-field" />
       <button type="submit" class="action-button">Actualizar</button>
     </form>
 
-    <h2 class="section-heading">Mi Red</h2>
+    <h2 class="section-heading">Mi red</h2>
     <ul class="user-list">
       <li v-for="contacto in contactos" :key="contacto.username" class="user-item">
-        <p>Username: {{ contacto.username }}</p>
+        <p>Usuario: {{ contacto.username }}</p>
         <p>Email: {{ contacto.email }}</p>
         <button @click="eliminarContacto(contacto.id)" class="action-button">Eliminar</button>
       </li>
@@ -38,7 +40,7 @@
     <h2 class="section-heading">Siguiendo</h2>
     <ul class="user-list">
       <li v-for="seguido in seguidos" :key="seguido.username" class="user-item">
-        <p>Username: {{ seguido.username }}</p>
+        <p>Usuario: {{ seguido.username }}</p>
         <p>Email: {{ seguido.email }}</p>
         <button @click="eliminarSeguido(seguido.id)" class="action-button">Eliminar</button>
       </li>

@@ -1,6 +1,6 @@
 <template>
   <div class="search-container">
-    <h2 style="color: #4267B2; font-size: 20px;">Buscar y Agregar Usuarios</h2>
+    <h2 style="color: #4267B2; font-size: 20px;">Buscar y agregar usuarios</h2>
     <div class="search">
       <input v-model="searchText" placeholder="Buscar usuario por nombre" />
       <button @click="buscarUsuario">Buscar</button>
